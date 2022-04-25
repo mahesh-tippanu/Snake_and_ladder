@@ -1,4 +1,4 @@
-package com.bridgelabz.uc4;
+package com.bridgelabz.uc5;
 
 import com.bridgelabz.uc1.InitialPositionOfPlayer;
 
@@ -12,8 +12,7 @@ class Dice {
     }
 }
 
-    public class PlayerStatus {
-
+public class ExactWinning {
 
         final static int NO_PLAY = 1;
         final static int LADDER = 2;
@@ -46,7 +45,7 @@ class Dice {
                             positionObj.position -= die_number;
                         }
                         break;
-                    }
+                }
             }
             System.out.println("Current Position is : " + positionObj.position);
             if (positionObj.position == 100){
