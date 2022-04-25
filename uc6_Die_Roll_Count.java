@@ -1,4 +1,4 @@
-package com.bridgelabz.uc5;
+package com.bridgelabz.uc6;
 
 import com.bridgelabz.uc1.InitialPositionOfPlayer;
 
@@ -12,7 +12,7 @@ class Dice {
     }
 }
 
-public class ExactWinning {
+    public class DieRollCount {
 
         final static int NO_PLAY = 1;
         final static int LADDER = 2;
@@ -25,12 +25,15 @@ public class ExactWinning {
 
         public static void main(String[] args) {
 
+            int dieRolls = 0;
 
             InitialPositionOfPlayer positionObj = new InitialPositionOfPlayer();
             Dice dice = new Dice();
 
+
             while (positionObj.position < 100) {
                 int die_number = dice.dieRoll();
+                dieRolls += 1;
 
                 switch (check()) {
                     case NO_PLAY:
@@ -47,9 +50,7 @@ public class ExactWinning {
                         break;
                 }
             }
-            System.out.println("Current Position is : " + positionObj.position);
-            if (positionObj.position == 100){
-                System.out.println("Player won the game");
-            }
+            System.out.println("Number of time die rolled is : " + dieRolls);
         }
+
     }
